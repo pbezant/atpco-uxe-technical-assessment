@@ -1,0 +1,1 @@
+I first had the ai analyze the readme and create an implementation plan. Then I cleared the chat and had the ai check cross check with Opus to look for any gaps. The ai found the vendor library docs and connected the components from the figma design

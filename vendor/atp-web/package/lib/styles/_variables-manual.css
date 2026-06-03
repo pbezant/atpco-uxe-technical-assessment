@@ -1,0 +1,127 @@
+:root {
+  --atp-z-index-bottom: -2;
+  --atp-z-index-under: -1;
+  --atp-z-index-base: 10;
+  --atp-z-index-over-base: 11;
+  --atp-z-index-menu: 200;
+  --atp-z-index-over-menu: 201;
+  --atp-z-index-banner: 202;
+  --atp-z-index-over-banner: 203;
+  --atp-z-index-sidebar-nav: 250;
+  --atp-z-index-overlay: 300;
+  --atp-z-index-slideover: 500;
+  --atp-z-index-modal: 1000;
+  --atp-z-index-over-modal: 1001;
+  --atp-app-header-height: 48px;
+
+  /* Variables below for changing sidebar positioning*/
+
+  --atp-app-sidebar-width: 240px;
+  --atp-toggle-button-distance: 100%;
+
+  --atp-main-content-box-shadow: 0 2px 7.5px hsla(0, 0%, 0%, 0.1);
+  --atp-page-background-color: hsla(0, 0%, 97.25%, 1);
+  --atp-box-shadow-sidebar-toggle: 0px 2px 8px -1px hsla(0, 0%, 0%, 0.15);
+  --atp-box-shadow-toast: 3px 3px 8px 0px hsla(0, 0%, 0%, 0.25);
+  --atp-box-shadow-light: 0 2px 7.5px 0 hsla(244.8, 17.007%, 28.824%, 0.1);
+  --atp-box-shadow-medium: 0px 4px 19.7px -3px hsla(0, 0%, 0%, 0.1);
+  --atp-box-shadow-strong: 0px 4px 24px -3px hsla(0, 0%, 0%, 0.25);
+  --atp-box-shadow-icon-clickable-pressed-dark: 0 0 0 8px hsla(0, 0%, 0%, 0.5);
+  --atp-box-shadow-icon-clickable-hover-dark: 0 0 0 4px hsla(0, 0%, 0%, 0.34);
+  --atp-box-shadow-icon-clickable-pressed-light: 0 0 0 8px hsla(0, 0%, 100%, 0.5);
+  --atp-box-shadow-icon-clickable-hover-light: 0 0 0 4px hsla(0, 0%, 100%, 0.34);
+  --atp-focus-color: hsla(207, 100%, 36%, 1); /* TODO: replace with a focus color token */
+  --atp-focus-color-inverse: var(--atp-neutral-100);
+  --atp-focus-width: 2px;
+  --atp-focus-outline-offset: 2px;
+  --atp-focus-outline-offset-extended: 8px;
+  --atp-text-primary-weak-enabled: hsla(210, 24%, 30.2%, 1);
+
+  /* component-specific */
+  --atp-button-block-size-large: 40px;
+  --atp-button-padding-block-large: calc(var(--atp-space-xs, 8px) + var(--atp-space-xxs, 4px));
+  --atp-datepicker-date-circle: 24px;
+  --atp-alert-height: 48px;
+  --atp-alert-page-small-height: 42px;
+  --atp-dl-border-color: var(--atp-element-border-primary-medium-enabled);
+  --atp-meter-track-color: var(--atp-element-fill-blue-strong-disabled);
+  --atp-meter-fill-color: var(--atp-element-fill-blue-strong-enabled);
+  --atp-meter-height: 8px;
+  --atp-meter-width: 100%;
+  --atp-meter-border-radius: var(--atp-border-radius-s);
+  --atp-meter-circle-size: 32px;
+  --atp-meter-circle-mask-size: 45%; /* size of the hollowed-out section in the middle of the circle */
+  --atp-meter-circle-gradient: conic-gradient(
+    var(--atp-meter-fill-color) calc(360deg / var(--atp-meter-max) * var(--atp-meter-value)),
+    var(--atp-meter-track-color) calc(360deg / var(--atp-meter-max) * var(--atp-meter-value) + 1deg),
+    var(--atp-meter-track-color) 360deg
+  );
+
+  --atp-header-global-link-text-not-selected-enabled: var(--atp-neutral-0);
+  --atp-header-global-link-text-not-selected-hover: hsla(0, 0%, 8%, 1);
+
+  --atp-sidebar-parent-item-hover: hsla(0, 0%, 95.29%, 1);
+  --atp-sidebar-parent-item-active: hsla(0, 0%, 88.63%, 1);
+  --atp-tab-height: 40px;
+  --atp-toggle-button-position-block-start: 0;
+
+  /* Custom sidebar colors */
+  --atp-sidebar-item-hover: hsla(217, 91%, 72.55%, 1);
+  --atp-sidebar-item-active: hsla(217, 89%, 58.63%, 1);
+  --atp-sidebar-item-selected: hsla(217, 86%, 79.41%, 1);
+  --atp-sidebar-list-selected: hsla(217, 85%, 90.2%, 1);
+
+  /* Dropdown menu offset from button */
+  --atp-dropdown-menu-offset: var(--atp-space-xxxs);
+
+  /* segmented controls */
+  --atp-segmented-border-radius: var(--atp-border-radius-s);
+  --atp-segmented-wrapper-border-radius: var(--atp-border-radius-s);
+  --atp-segmented-segment-height-large: 32px;
+  --atp-segmented-segment-height-medium: 28px;
+  --atp-segmented-segment-height-small: 20px;
+  --atp-segmented-segment-height: var(--atp-segmented-segment-height-large);
+  --atp-segmented-label-font-size-large: var(--atp-font-size-body-m);
+  --atp-segmented-label-font-size-medium: var(--atp-font-size-body-s);
+  --atp-segmented-label-font-size-small: var(--atp-font-size-body-xs);
+  --atp-segmented-label-font-size: var(--atp-segmented-label-font-size-large);
+  --atp-segmented-label-line-height-large: var(--atp-line-height-body-m);
+  --atp-segmented-label-line-height-medium: var(--atp-line-height-body-s);
+  --atp-segmented-label-line-height-small: var(--atp-line-height-body-xs);
+  --atp-segmented-label-line-height: var(--atp-segmented-label-line-height-large);
+  --atp-segmented-label-font-weight: var(--atp-font-weight-semibold);
+  --atp-segmented-gap-large: var(--atp-space-xs);
+  --atp-segmented-gap-medium: var(--atp-space-xxs);
+  --atp-segmented-gap-small: var(--atp-space-xxxs);
+  --atp-segmented-gap: var(--atp-segmented-gap-large);
+  --atp-segmented-wrapper-padding-inline-large: var(--atp-space-xxs);
+  --atp-segmented-wrapper-padding-inline-medium: var(--atp-space-xxxs);
+  --atp-segmented-wrapper-padding-inline-small: var(--atp-space-xxxs);
+  --atp-segmented-wrapper-padding-inline: var(--atp-segmented-wrapper-padding-inline-large);
+  --atp-segmented-segment-width: 180px;
+  --atp-segmented-segment-margin-block: var(--atp-space-xxs);
+  --atp-segmented-segment-margin-inline: 0;
+  --atp-segmented-segment-padding-block: var(--atp-space-xs);
+  --atp-segmented-segment-padding-inline: var(--atp-space-s)
+    calc(var(--atp-space-xs) + var(--atp-space-xxxs));
+  --atp-segmented-segment-color-checked: var(--atp-content-inverse-medium-enabled);
+  --atp-segmented-segment-background-checked-default: var(--atp-atpco-navy-600);
+  --atp-segmented-segment-background-checked-utility-blue: var(
+    --atp-utility-primary-medium-enabled
+  );
+  --atp-segmented-segment-background-checked-slate: var(--atp-slate-600);
+  --atp-segmented-segment-background-checked: var(
+    --atp-segmented-segment-background-checked-default
+  );
+  --atp-segmented-fill-weak-enabled: var(--atp-button-secondary-medium-enabled);
+  --atp-segmented-fill-weak-hover: var(--atp-button-secondary-medium-hover);
+  --atp-segmented-fill-weak-pressed: var(--atp-button-secondary-medium-pressed);
+  --atp-segmented-fill-strong-enabled: var(--atp-atpco-navy-600);
+
+  --atp-segmented-badge-color: var(--atp-content-inverse-medium-enabled);
+  --atp-segmented-badge-background: var(--atp-element-fill-primary-strong-enabled);
+  --atp-segmented-badge-color-checked: var(--atp-content-primary-strong-enabled);
+  --atp-segmented-badge-background-checked: var(--atp-element-fill-primary-weak-enabled);
+
+  --atp-transition-standard: 0.2s ease-out;
+}

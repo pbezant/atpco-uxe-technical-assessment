@@ -1,0 +1,39 @@
+a {
+  color: var(--atp-element-fill-blue-strong-enabled);
+  text-decoration: underline;
+  transition: all var(--atp-transition-standard);
+}
+
+a:hover,
+a:focus {
+  color: var(--atp-element-fill-blue-strong-hover);
+}
+
+a:active {
+  color: var(--atp-element-fill-blue-strong-pressed);
+}
+
+a.atp-link--inverse {
+  color: var(--atp-element-fill-inverse-weak-enabled);
+}
+
+a.atp-link--inverse:hover,
+a.atp-link--inverse:focus {
+  color: var(--atp-element-fill-inverse-weak-hover);
+}
+
+a.atp-link--inverse:active {
+  color: var(--atp-element-fill-inverse-weak-pressed);
+}
+
+a.atp-link--minimal {
+  color: inherit;
+  font-weight: var(--atp-font-weight-semibold);
+  text-decoration: none;
+}
+
+a.atp-link--minimal:hover,
+a.atp-link--minimal:focus,
+a.atp-link--minimal:active {
+  text-decoration: underline;
+}

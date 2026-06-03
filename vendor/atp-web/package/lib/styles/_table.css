@@ -1,0 +1,226 @@
+table.atp-table {
+  --atp-table-border-radius: var(--atp-border-radius-s, 4px);
+  --atp-table-border-color: var(--atp-element-border-primary-medium-enabled);
+  --atp-table-head-background-color: transparent;
+
+  inline-size: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.atp-table--narrow {
+  inline-size: auto;
+}
+
+/* caption */
+table.atp-table caption,
+table.atp-table caption h2,
+table.atp-table caption h3,
+table.atp-table caption h4,
+table.atp-table caption h5,
+table.atp-table caption h6,
+.atp-table-caption {
+  margin: 0;
+  font-weight: var(--atp-font-weight-semibold);
+  font-size: var(--atp-font-size-body-m);
+  text-align: start;
+}
+
+table.atp-table caption,
+.atp-table-caption {
+  margin-block-end: var(--atp-space-s);
+}
+
+table.atp-table caption .atp-table-caption {
+  margin-block-end: 0;
+}
+
+/* table cells */
+table.atp-table th,
+table.atp-table td {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-block: var(--atp-space-xs, 8px);
+  padding-inline: var(--atp-space-s, 16px);
+  font-feature-settings: "tnum" 1, "zero" 1;
+  text-align: start;
+  vertical-align: middle;
+  border-block-start: 1px solid var(--atp-table-border-color);
+  border-inline-start: 1px solid var(--atp-table-border-color);
+}
+
+table.atp-table td:last-child,
+table.atp-table th:last-child {
+  border-inline-end: 1px solid var(--atp-table-border-color);
+}
+
+table.atp-table *:last-child tr:last-of-type th,
+table.atp-table *:last-child tr:last-of-type td {
+  border-block-end: 1px solid var(--atp-table-border-color);
+}
+
+/* header cells */
+table.atp-table th {
+  font-weight: var(--atp-font-weight-semibold);
+}
+
+table.atp-table thead th {
+  text-align: start;
+  background-color: var(--atp-table-head-background-color);
+  vertical-align: middle;
+}
+
+table.atp-table.atp-table--header-fill-light-slate {
+  --atp-table-head-background-color: var(--atp-element-fill-primary-weak-enabled);
+}
+
+/* utility classes for table cells */
+table.atp-table .atp-table-cell--start {
+  text-align: start;
+}
+
+table.atp-table .atp-table-cell--center {
+  text-align: center;
+}
+
+table.atp-table .atp-table-cell--end {
+  text-align: end;
+}
+
+table.atp-table .atp-table-cell--nowrap {
+  white-space: nowrap;
+}
+
+/* border options */
+table.atp-table.atp-table--borderless {
+  --atp-table-border-color: transparent;
+}
+
+table.atp-table.atp-table--outer-border {
+  border: 1px solid var(--atp-table-border-color);
+  border-radius: var(--atp-table-border-radius);
+}
+
+table.atp-table.atp-table--outer-border th,
+table.atp-table.atp-table--outer-border td {
+  --atp-table-border-color: transparent;
+}
+
+table.atp-table.atp-table--inner-borders thead th {
+  border-block-start-color: transparent;
+}
+
+table.atp-table.atp-table--inner-borders :not(thead + tbody) tr:first-child th,
+table.atp-table.atp-table--inner-borders :not(thead + tbody) tr:first-child td {
+  border-block-start-color: transparent;
+}
+
+table.atp-table.atp-table--inner-borders th:first-child,
+table.atp-table.atp-table--inner-borders td:first-child {
+  border-inline-start-color: transparent;
+}
+
+table.atp-table.atp-table--inner-borders th:last-child,
+table.atp-table.atp-table--inner-borders td:last-child {
+  border-inline-end-color: transparent;
+}
+
+table.atp-table.atp-table--inner-borders tbody tr:last-child th,
+table.atp-table.atp-table--inner-borders tbody tr:last-child td {
+  border-block-end-color: transparent;
+}
+
+/* round the table's corners */
+table.atp-table thead tr:first-of-type th:first-child,
+table.atp-table tbody:first-child tr:first-of-type th:first-child,
+table.atp-table caption + tbody tr:first-of-type :first-child {
+  border-start-start-radius: var(--atp-table-border-radius);
+}
+
+table.atp-table thead tr:first-of-type th:last-child,
+table.atp-table tbody:first-child tr:first-of-type td:last-child,
+table.atp-table caption + tbody tr:first-of-type :last-child {
+  border-start-end-radius: var(--atp-table-border-radius);
+}
+
+table.atp-table *:last-child tr:last-of-type th:first-child,
+table.atp-table *:last-child tr:last-of-type td:first-child {
+  border-end-start-radius: var(--atp-table-border-radius);
+}
+
+table.atp-table *:last-child tr:last-of-type th:last-child,
+table.atp-table *:last-child tr:last-of-type td:last-child {
+  border-end-end-radius: var(--atp-table-border-radius);
+}
+
+/* 
+ * "description" tables
+ */
+table.atp-table.atp-table--description tbody tr {
+  transition: all var(--atp-transition-standard);
+}
+
+table.atp-table.atp-table--description tbody tr th,
+table.atp-table.atp-table--description tbody tr td {
+  border-block-end: 1px solid var(--atp-dl-border-color);
+}
+
+table.atp-table.atp-table--description tbody tr:last-child {
+  border-block-end: none;
+}
+
+table.atp-table.atp-table--description th,
+table.atp-table.atp-table--description td,
+table.atp-table.atp-table--description *:last-child *:last-of-type td {
+  inline-size: var(--atp-table-cell-width, 50%);
+  vertical-align: top;
+  border: none;
+}
+
+table.atp-table.atp-table--description thead th {
+  color: var(--atp-neutral-700); /* TODO: replace with new color token once it's available */
+  font-size: var(--atp-font-size-body-s);
+  background: none;
+}
+
+table.atp-table.atp-table--description tbody th,
+table.atp-table.atp-table--description tbody td {
+  position: relative;
+}
+
+table.atp-table.atp-table--description th:first-child,
+table.atp-table.atp-table--description tbody td:first-child {
+  padding-inline-start: 0;
+}
+
+table.atp-table.atp-table--description tbody th::after,
+table.atp-table.atp-table--description tbody td::after {
+  content: "";
+  position: absolute;
+  inset-block-start: var(--atp-space-xxs);
+  inset-block-end: var(--atp-space-xxs);
+  inset-inline-end: 0;
+  display: block;
+  inline-size: 1px;
+  block-size: auto;
+  border-inline-end: 1px solid var(--atp-dl-border-color);
+}
+
+table.atp-table.atp-table--description tbody td:last-child::after {
+  display: none;
+}
+
+table.atp-table.atp-table--description tbody tr:hover,
+table.atp-table.atp-table--description tbody tr:focus,
+table.atp-table.atp-table--description tbody tr:focus-within,
+table.atp-table.atp-table--description tbody tr:active {
+  background: var(--atp-element-fill-primary-weak-hover);
+}
+
+/* 
+ * container to make scrollable tables 
+ */
+.atp-table-scroll-container {
+  inline-size: 100%;
+  overflow: auto;
+}

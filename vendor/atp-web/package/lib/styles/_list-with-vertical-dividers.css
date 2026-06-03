@@ -1,0 +1,66 @@
+.atp-list-with-vertical-dividers {
+  --atp-list-with-vertical-dividers-block-gutter: 1px;
+  --atp-list-with-vertical-dividers-border-color: var(--atp-element-border-primary-medium-enabled);
+}
+
+ul.atp-list-with-vertical-dividers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--atp-space-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.atp-list-with-vertical-dividers li {
+  position: relative;
+  padding-inline-end: var(--atp-space-s);
+}
+
+ul.atp-list-with-vertical-dividers li::after {
+  content: "";
+  position: absolute;
+  inset-block: var(--atp-list-with-vertical-dividers-block-gutter)
+    var(--atp-list-with-vertical-dividers-block-gutter);
+  inset-inline-end: -1px;
+  display: block;
+  inline-size: 1px;
+  block-size: auto;
+  border-inline-end: 1px solid var(--atp-list-with-vertical-dividers-border-color);
+}
+
+ul.atp-list-with-vertical-dividers li:last-of-type {
+  padding-inline-end: unset;
+}
+
+ul.atp-list-with-vertical-dividers li:last-of-type::after,
+dl.atp-list-with-vertical-dividers dd:last-of-type::after {
+  display: none;
+}
+
+dl.atp-list-with-vertical-dividers {
+  display: flex;
+  margin: 0;
+}
+
+dl.atp-list-with-vertical-dividers > dt {
+  padding-inline-end: 0.6ch; /* approximate width of a space character */
+}
+
+dl.atp-list-with-vertical-dividers dd {
+  position: relative;
+  margin-inline-start: 0;
+  padding-inline-end: calc(2 * var(--atp-space-s));
+}
+
+dl.atp-list-with-vertical-dividers dd::after {
+  content: "";
+  position: absolute;
+  inset-block: var(--atp-list-with-vertical-dividers-block-gutter)
+    var(--atp-list-with-vertical-dividers-block-gutter);
+  inset-inline-end: var(--atp-space-s);
+  display: block;
+  inline-size: 1px;
+  block-size: auto;
+  border-inline-end: 1px solid var(--atp-list-with-vertical-dividers-border-color);
+}

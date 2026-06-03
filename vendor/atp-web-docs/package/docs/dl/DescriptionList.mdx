@@ -1,0 +1,58 @@
+import {Meta, Typeset, Unstyled, Story, Canvas, Source} from '@storybook/addon-docs/blocks';
+import * as DlStories from './dl.stories';
+
+<Meta of={DlStories} title="Components/DescriptionList" />
+
+# Description List
+
+Description List (DL) is used to create a list of key-value pairs, or a list of terms and
+their descriptions. It consists of a list of pairs of Description Terms (the "keys" on the left)
+and Description Details (the "values" on the right).
+
+Description List is not a web component, but instead a CSS class(es) which you add onto the
+native HTML `<dl>`, `<dt>`, and `<dd>` elements.
+
+<Canvas of={DlStories.Primary} />
+
+## Tags
+
+You can place a Tag inside a Description Term, and it will be positioned
+at the top right.
+
+<Canvas of={DlStories.Tags} />
+
+## Nested List inside the Details
+
+When there are multiple items in the details, use a List With Vertical Dividers component
+to separate them. Use a `<ul>` if the items are a simple list,
+or `<dl>` if the items consist of name-value pairs.
+
+<Canvas of={DlStories.NestedListInsideDetails} />
+
+## Custom Width
+
+By default, the Description Terms will be as wide as they need to be to hold their contents.
+You can customize their width using custom CSS,
+setting a value for the `--atp-dl-dt-width` CSS custom property.
+
+<Canvas of={DlStories.CustomWidth} />
+
+## Borderless
+
+Use the borderless option to remove the internal borders between the cells of the list.
+
+<Canvas of={DlStories.Borderless} />
+
+## With a "description" Table
+
+Use the "description" variant for the Table component when your UI has both a Description List
+for key-value pairs and a Table that needs a matching visual look.
+
+<Canvas of={DlStories.WithDescriptionTable} />
+
+## Indented
+
+Use the indented variant to indent the term slightly, so that it aligns with other content on
+the page.
+
+<Canvas of={DlStories.Indented} />

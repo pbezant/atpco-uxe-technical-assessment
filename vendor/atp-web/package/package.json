@@ -1,0 +1,39 @@
+{
+  "name": "@atpco/atp-web",
+  "version": "0.21.0",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "dependencies": {
+    "lit": "^3.3.0"
+  },
+  "peerDependencies": {
+    "luxon": "3.7.1"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^4.0.0",
+    "@web/dev-server": "^0.1.31",
+    "@web/dev-server-legacy": "^1.0.0",
+    "@web/test-runner": "^0.15.0",
+    "@web/test-runner-playwright": "^0.9.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    },
+    "./react": {
+      "import": "./react.js",
+      "types": "./react.d.ts"
+    },
+    "./global.css": "./lib/styles/global.css",
+    "./normalize.css": "./lib/styles/_normalize.css"
+  },
+  "publishConfig": {
+    "registry": "http://artmgt01.atpco.org:8081/repository/atp-npm/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://atpco.ghe.com/ProductDesign/Design-System.git"
+  }
+}

@@ -1,0 +1,95 @@
+/* TODO: apply a default styling to the body tag so <p> etc can inherit from it */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p + p {
+  margin-block-start: 1em;
+}
+
+strong,
+b {
+  font-weight: var(--atp-font-weight-semibold);
+}
+
+/* using :where() to minimize specificity */
+:where(.atp-heading-xl, .atp-heading-l, .atp-heading-m, .atp-heading-s, .atp-heading-xs) {
+  font-family: var(--atpco-font-family-heading);
+  font-weight: var(--atp-font-weight-regular);
+  letter-spacing: var(--atp-letter-spacing-heading);
+}
+
+.atp-heading-xl {
+  font-size: var(--atp-font-size-heading-xl);
+  line-height: var(--atp-line-height-heading-xl);
+}
+
+.atp-heading-l {
+  font-size: var(--atp-font-size-heading-l);
+  line-height: var(--atp-line-height-heading-l);
+}
+
+.atp-heading-m {
+  font-size: var(--atp-font-size-heading-m);
+  line-height: var(--atp-line-height-heading-m);
+}
+
+.atp-heading-s {
+  font-size: var(--atp-font-size-heading-s);
+  line-height: var(--atp-line-height-heading-s);
+}
+
+.atp-heading-xs {
+  font-size: var(--atp-font-size-heading-xs);
+  line-height: var(--atp-line-height-heading-xs);
+}
+
+:where(.atp-body-xl, .atp-body-l, .atp-body-m, .atp-body-s, .atp-body-xs) {
+  font-weight: var(--atp-font-weight-regular);
+  letter-spacing: var(--atp-letter-spacing-body);
+}
+
+.atp-body-l {
+  font-size: var(--atp-font-size-body-l);
+  line-height: var(--atp-line-height-body-l);
+}
+
+.atp-body-m {
+  font-size: var(--atp-font-size-body-m);
+  line-height: var(--atp-line-height-body-m);
+}
+
+.atp-body-s {
+  font-size: var(--atp-font-size-body-s);
+  line-height: var(--atp-line-height-body-s);
+}
+
+.atp-body-xs {
+  font-size: var(--atp-font-size-body-xs);
+  line-height: var(--atp-line-height-body-xs);
+}
+
+/* these should come after the heading and paragraph classes, so that they are sure to override the defaults */
+.atp-font-weight-bold {
+  font-weight: var(--atp-font-weight-bold);
+}
+.atp-font-weight-semibold {
+  font-weight: var(--atp-font-weight-semibold);
+}
+.atp-font-weight-medium {
+  font-weight: var(--atp-font-weight-medium);
+}
+.atp-font-weight-regular {
+  font-weight: var(--atp-font-weight-regular);
+}
+.atp-font-weight-light {
+  font-weight: var(--atp-font-weight-light);
+}

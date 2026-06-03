@@ -1,0 +1,166 @@
+.atp-display-flex {
+  display: flex;
+}
+
+.atp-display-inline-flex {
+  display: inline-flex;
+}
+
+/* flex direction */
+.atp-flex-direction-row {
+  flex-direction: row;
+}
+
+.atp-flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.atp-flex-direction-column {
+  flex-direction: column;
+}
+
+.atp-flex-direction-row-reverse {
+  flex-direction: column-reverse;
+}
+
+/* flex wrap */
+.atp-flex-wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.atp-flex-wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.atp-flex-wrap-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* gap */
+.atp-gap-xxxs {
+  gap: var(--atp-space-xxxs);
+}
+
+.atp-gap-xxs {
+  gap: var(--atp-space-xxs);
+}
+
+.atp-gap-xs {
+  gap: var(--atp-space-xs);
+}
+
+.atp-gap-s {
+  gap: var(--atp-space-s);
+}
+
+.atp-gap-m {
+  gap: var(--atp-space-m);
+}
+
+.atp-gap-l {
+  gap: var(--atp-space-l);
+}
+
+.atp-gap-xl {
+  gap: var(--atp-space-xl);
+}
+
+.atp-gap-xxl {
+  gap: var(--atp-space-xxl);
+}
+
+/* justify content */
+.atp-justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+.atp-justify-content-flex-end {
+  justify-content: flex-end;
+}
+
+.atp-justify-content-center {
+  justify-content: center;
+}
+
+.atp-justify-content-space-between {
+  justify-content: space-between;
+}
+
+.atp-justify-content-space-around {
+  justify-content: space-around;
+}
+
+.atp-justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+/* align content */
+.atp-align-content-flex-start {
+  align-content: flex-start;
+}
+
+.atp-align-content-flex-end {
+  align-content: flex-end;
+}
+
+.atp-align-content-center {
+  align-content: center;
+}
+
+.atp-align-content-stretch {
+  align-content: stretch;
+}
+
+.atp-align-content-space-between {
+  align-content: space-between;
+}
+
+.atp-align-content-space-around {
+  align-content: space-around;
+}
+
+/* align items */
+.atp-align-items-flex-start {
+  align-items: flex-start;
+}
+
+.atp-align-items-flex-end {
+  align-items: flex-end;
+}
+
+.atp-align-items-center {
+  align-items: center;
+}
+
+.atp-align-items-stretch {
+  align-items: stretch;
+}
+
+.atp-align-items-baseline {
+  align-items: baseline;
+}
+
+/* align self */
+.atp-align-self-auto {
+  align-self: auto;
+}
+
+.atp-align-self-flex-start {
+  align-self: flex-start;
+}
+
+.atp-align-self-flex-end {
+  align-self: flex-end;
+}
+
+.atp-align-self-center {
+  align-self: center;
+}
+
+.atp-align-self-baseline {
+  align-self: baseline;
+}
+
+.atp-align-self-stretch {
+  align-self: stretch;
+}

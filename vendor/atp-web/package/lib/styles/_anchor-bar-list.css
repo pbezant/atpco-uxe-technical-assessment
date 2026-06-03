@@ -1,0 +1,63 @@
+.atp-anchor-bar-list {
+  display: flex;
+  gap: var(--atp-space-xs);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-block-end: 1px solid var(--atp-element-border-primary-medium-enabled);
+}
+
+.atp-anchor-bar-list li {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+ * TODO: 
+ * Much of this CSS is duplicated with TabSet; this is not ideal.
+ * Ideally, we could find a better way to DRY.
+ */
+.atp-anchor-bar-list a {
+  all: unset;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--atp-space-xs);
+  align-items: center;
+  padding-block: 0;
+  padding-inline: var(--atp-space-xs);
+  block-size: var(--atp-tab-height);
+  border-start-start-radius: var(--atp-border-radius-m);
+  border-start-end-radius: var(--atp-border-radius-m);
+  border-end-end-radius: 0;
+  border-end-start-radius: 0;
+  color: var(--atp-button-primary-medium-enabled);
+  font-family: var(--atpco-font-family);
+  font-size: var(--atp-font-size-body-m);
+  font-weight: var(--atp-font-weight-regular);
+  line-height: var(--atp-line-height-body-m);
+  letter-spacing: var(--atp-letter-spacing-s);
+  text-decoration: none;
+  background: transparent;
+  border-block-end: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--atp-transition-standard), color var(--atp-transition-standard);
+}
+
+.atp-anchor-bar-list a:hover,
+.atp-anchor-bar-list a:focus-visible {
+  color: var(--atp-utility-primary-medium-hover);
+}
+
+.atp-anchor-bar-list a:focus-visible {
+  outline: var(--atp-focus-width) solid var(--atp-focus-color);
+  outline-offset: var(--atp-focus-outline-offset);
+}
+
+.atp-anchor-bar-list a[aria-current] {
+  color: var(--atp-utility-primary-medium-pressed);
+}
+
+.atp-anchor-bar-list a[aria-current] {
+  border-block-end: 2px solid var(--atp-element-fill-blue-strong-enabled);
+  background-color: var(--atp-element-fill-blue-medium-enabled);
+}

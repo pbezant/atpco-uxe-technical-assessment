@@ -1,0 +1,78 @@
+dl.atp-dl {
+  --atp-dl-divider-block-gutter: var(--atp-space-xxs);
+  --atp-dl-divider-list-block-gutter: 1px;
+
+  display: grid;
+  grid-template-columns: var(--atp-dl-dt-width, auto) 1fr;
+  margin: 0;
+}
+
+dl.atp-dl > dt,
+dl.atp-dl > dd {
+  padding-block: var(--atp-space-xs);
+  padding-inline: 0;
+  border-block-end: 1px solid var(--atp-dl-border-color);
+}
+
+dl.atp-dl > dt:last-of-type,
+dl.atp-dl > dd:last-of-type {
+  border-width: 0;
+}
+
+/* description term (the "key", on the left */
+dl.atp-dl > dt {
+  grid-column: 1;
+  padding-inline-end: var(--atp-space-s);
+  color: var(--atp-content-primary-medium-enabled);
+}
+
+/* description details (the "value", on the right */
+dl.atp-dl > dd:before {
+  content: "";
+  position: absolute;
+  inset-block-start: var(--atp-dl-divider-block-gutter);
+  inset-block-end: var(--atp-dl-divider-block-gutter);
+  inset-inline-start: 0;
+  display: block;
+  inline-size: 1px;
+  block-size: auto;
+  border-inline-end: 1px solid var(--atp-dl-border-color);
+}
+
+dl.atp-dl > dd {
+  position: relative;
+  grid-column: 2;
+  margin-inline-start: 0;
+  padding-inline-start: var(--atp-space-s);
+}
+
+/* tags */
+dl.atp-dl > dt:has(atp-tag) {
+  display: flex;
+  gap: var(--atp-space-s);
+  justify-content: space-between;
+  inline-size: 100%;
+}
+
+dl.atp-dl > dt atp-tag {
+  align-self: flex-start;
+  vertical-align: top;
+}
+
+/* border options */
+dl.atp-dl.atp-dl--borderless {
+  --atp-dl-border-color: transparent;
+}
+
+dl.atp-dl.atp-dl--borderless dd {
+  padding-inline-start: 0;
+}
+
+/* indented */
+dl.atp-dl.atp-dl--indented dt {
+  padding-inline-start: var(--atp-space-s);
+}
+
+dl.atp-dl.atp-dl--indented dd {
+  padding-inline-end: var(--atp-space-s);
+}

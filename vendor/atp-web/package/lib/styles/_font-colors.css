@@ -1,0 +1,28 @@
+/* font colors */
+.atp-color-strong {
+  color: var(--atp-content-primary-strong-enabled);
+}
+
+.atp-color-medium {
+  color: var(--atp-content-primary-medium-enabled);
+}
+
+.atp-color-weak {
+  color: var(--atp-content-primary-weak-enabled);
+}
+
+.atp-color-inverse {
+  color: var(--atp-content-inverse-medium-enabled);
+}
+
+.atp-color-strong-disabled {
+  color: var(--atp-content-primary-strong-disabled);
+}
+
+.atp-color-medium-disabled {
+  color: var(--atp-content-primary-medium-disabled);
+}
+
+.atp-color-weak-disabled {
+  color: var(--atp-content-primary-weak-disabled);
+}
