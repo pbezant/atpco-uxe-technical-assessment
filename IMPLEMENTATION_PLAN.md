@@ -326,7 +326,7 @@ other custom events — inline would cause a TS error).
 | State | `color` | `role` | `icon` | Label |
 |---|---|---|---|---|
 | `success` | `AlertColor.INFO` | `AlertRole.STATUS` | `circle-check` | "Delivery configuration created successfully." |
-| `error` | `AlertColor.DANGER` | `AlertRole.ALERT` | `circle-exclamation` | "An error occurred. Please try again." |
+| `error` | `AlertColor.DANGER` | `AlertRole.ALERT` | `triangle-exclamation` | "An error occurred. Please try again." |
 
 > There is no `SUCCESS` color in the Lift palette (only `INFO`, `DANGER`, `WARNING`), so `INFO`
 > is used for positive confirmation.
@@ -448,6 +448,32 @@ Hardcoding a toggle would require a code change to test; using `useSearchParams(
 query param from the page URL to the fetch URL automatically. Normal submissions (no query param)
 are unaffected.
 
+### Two non-obvious TypeScript fixes worth knowing for the interview
+
+**1. `class` not `className` on web components**
+
+`WebComponentProps<T>` (the type that wraps every `atp-*` element in JSX) explicitly declares
+`class?: string` — not `className`. This is because `className` is a React synthetic prop that
+React maps to the `class` DOM attribute for regular HTML elements. Web components sit outside
+React's synthetic event system, so they use the raw DOM attribute name `class`. Using
+`className="form-field"` on an `atp-input-field` causes a TypeScript error at compile time;
+`class="form-field"` is correct and the build passes.
+
+**2. `role` on `atp-alert` must go in the spread object, not as an inline prop**
+
+`WebComponentProps<T>` is built with a mapped type that filters out any key that already exists
+on the standard `HTMLElement` interface:
+```ts
+[K in keyof T as K extends keyof HTMLElement ? never : K]?: T[K]
+```
+`role` IS a standard `HTMLElement` property (the ARIA role attribute), so it gets excluded from
+`WebComponentProps<Alert>` even though `Alert` has its own `role: AlertRole` property. Setting
+`role={AlertRole.STATUS}` as an inline prop causes a TS2322 error. The fix: include `role` in
+the `AlertEventProps` spread type (`role?: string`) and set it there. TypeScript uses
+**assignability checking** (not excess-property checking) when evaluating spread arguments in
+JSX — extra properties in a spread are allowed. This is the same mechanism that lets all our
+custom event handler spreads compile cleanly.
+
 ### Sort logic
 ```ts
 (a, b) => new Date(a.acceptedAt).getTime() - new Date(b.acceptedAt).getTime()
@@ -467,7 +493,7 @@ Confirmed by reading `vendor/atp-web/package/lib/` type definitions and bundled 
 | `atp-button` | `label`, `type="submit"`, `isLoading` | ✓ |
 | `atp-checkbox` | `label`, `checked`, `disabled` | ✓ |
 | `atp-dropdown` | `itemsList`, `activeIds`, `selectionMode`, `showCheckmarks` | ✓ |
-| `atp-input-field` | `required`, `textarea`, `className` | ✓ |
+| `atp-input-field` | `required`, `textarea`, `class` (not `className`) | ✓ |
 
 **Note on `itemSelectedOutput` detail shape:** typed as `string[]` (the updated `activeIds`
 array), consistent with the `activeIds: string[]` prop contract and standard Lit output

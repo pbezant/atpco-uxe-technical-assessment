@@ -29,3 +29,28 @@ footer nav {
 .welcome-cta {
   margin-block: var(--atp-space-m) 0;
 }
+
+.form-field {
+  max-width: 400px;
+  display: block;
+  margin-bottom: var(--atp-space-m);
+}
+
+.conditional-fields {
+  padding-left: var(--atp-space-l);
+  margin-bottom: var(--atp-space-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--atp-space-s);
+}
+
+.form-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--atp-space-s);
+  margin-top: var(--atp-space-m);
+}
+
+.form-actions {
+  margin-top: var(--atp-space-l);
+}
