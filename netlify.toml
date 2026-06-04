@@ -1,0 +1,8 @@
+[build]
+  command = "nx run tech-assessment-react:build"
+  publish = "dist/tech-assessment-react/client"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
